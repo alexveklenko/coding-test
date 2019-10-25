@@ -1,5 +1,8 @@
-# Write your code here
-
-
 def get_temperature_closest_to_zero(temperatures):
-    return 0
+
+    first_min = min(temperatures, key=abs, default=0)
+
+    if abs(first_min) in temperatures:
+        return abs(first_min)
+
+    return first_min
